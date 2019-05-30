@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/assets/css/venha-conhecer.css">
+    <link rel="stylesheet" href="/assets/css/common/common.min.css">
+    <link rel="stylesheet" href="/assets/css/swiper-4.5.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="header header-fixed">
+
+    <a href="home.html">
+        <div class="header-logo">
+            <span>Chaveiro</span>
+            <span>Mineirão</span>
+        </div>
+    </a>
+
+    <div class="container header">
+        <ul class="header-menu">
+            <li class="header-menu__list">
+                <a href="home.html"><span>Home</span></a>
+            </li>
+            <li class="header-menu__list">
+                <a href="produtos.html"><span>Produtos</span></a>
+            </li>
+            <li class="header-menu__list">
+                <a href="servicos.html"><span>Serviços</span></a>
+            </li>
+            <li class="header-menu__list">
+                <a href="venha-conhecer.html"><span>Venha Conhecer</span></a>
+            </li>
+            <li class="header-menu__list">
+                <a href="sobre.html"><span>Sobre</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header-company">
+            CHAVEIRO MINEIRÃO - Atendimento 24H
+    </div>
+</section>
+<section class="header header-mobile header-fixed">
+
+    <div class="header-mobile__pin">
+
+    </div>
+
+    <div class="header-company">
+        Chaveiro Mineirão
+    </div>
+</section>
+
+<nav role="navigation" class="nav-hamburguer">
+    <div class="menuToggle">
+        <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+        <input type="checkbox" class="menuToggle-element" />
+
+        <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+        <ul class="menu">
+            <a href="home.html">
+                <li class="menu-item">Home</li>
+            </a>
+            <a href="produtos.html">
+                <li class="menu-item">Produtos</li>
+            </a>
+            <a href="servicos.html">
+                <li class="menu-item">Serviços</li>
+            </a>
+            <a href="venha-conhecer.html">
+                <li class="menu-item">Localização</li>
+            </a>
+            <a href="sobre.html">
+                <li class="menu-item">Sobre</li>
+            </a>
+        </ul>
+    </div>
+</nav>
+
+    <section class="body">
+        <div class="container container-title">
+            <div class="container-conteudo">
+                <h1 class="map-title">Venha Conferir</h1>
+            </div>
+        </div>
+        <div class="container-conteudo">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.2683001329838!2d-43.96683679051816!3d-19.820619095227492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa68fdc3b1aef0d%3A0x7f89a9a6227bb8dc!2sChaveiro+Mineir%C3%A3o+-+Jair+atendimento+24+Horas!5e0!3m2!1spt-BR!2sbr!4v1557111661331!5m2!1spt-BR!2sbr&zoom=9" frameborder="0" style="border:0" style="z-index:40" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    
+
+<section class="footer">
+    <div class="footer-desktop">
+        <div>
+
+        </div>
+    </div>
+    <div class="footer-contact-mobile">
+        <div class="swiper-container footer-contact-swiper__container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper footer-contact-swiper__wrapper">
+                <!-- Slides -->
+                <a class="swiper-slide">(31) 99468-0534</a>
+                <a class="swiper-slide">(31) 3451-5859</a>
+                <a class="swiper-slide">(31) 99999-9999</a>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</section>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+    window.onload = "mySwiper()";
+
+    var prevScrollpos = window.pageYOffset;
+
+    document.getElementsByClassName("header-company")[0].onmouseover = function () {
+        document.getElementsByClassName('header')[0].style.top = "0"
+    };
+
+    window.onscroll = function () {
+        if (window.scrollY > 80) {
+            console.log("Esconde");
+            document.getElementsByClassName('header')[0].style.top = "-80px"
+        } else {
+            console.log("Mostra");
+            document.getElementsByClassName('header')[0].style.top = "0"
+        }
+    }
+
+    document.getElementById("modal-whatsapp-close").onclick = function (e) {
+        if (!document.getElementById('modal_whatsapp').contains(e.target)) {
+            element.removeClass("modal-whatsapp-close", "d-block");
+            element.addClass("modal-whatsapp-close", "d-none");
+        }
+    };
+
+    document.getElementById("whatsapp-button").onclick = function (e) {
+        element.removeClass("modal-whatsapp-close", "d-none");
+        element.addClass("modal-whatsapp-close", "d-block");
+    }
+
+    document.getElementById('button-whatsapp-close').onclick = function (e) {
+        element.removeClass("modal-whatsapp-close", "d-block");
+        element.addClass("modal-whatsapp-close", "d-none");
+    }
+
+
+    var element = {
+
+        addClass: function (element_id, class_name) {
+            var el = document.getElementById(element_id);
+            el.classList.add(class_name);
+        },
+
+        findClass: function (element_id, class_name) {
+            var e = document.getElementById(element_id);
+            return e.classList.contains('modal_whatsapp-background');
+        },
+
+        removeClass: function (element_id, class_name) {
+            var e = document.getElementById(element_id);
+            e.classList.remove(class_name);
+        }
+    }
+
+</script>
+
+</html>
