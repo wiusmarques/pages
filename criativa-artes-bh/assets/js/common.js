@@ -1,0 +1,1 @@
+var swiper = new Swiper('.swiper-banner-home');
