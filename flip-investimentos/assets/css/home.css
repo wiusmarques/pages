@@ -1,1 +1,1 @@
-body{background-color:#131722}.content-banner{margin-top:40px}
+body{background-color:#131722}.content-banner{margin-top:40px}.banner-desktop{display:block}@media screen and (max-width:600px){.banner-desktop{display:none}}.banner-mobile{display:none}@media screen and (max-width:600px){.banner-mobile{display:block}}
