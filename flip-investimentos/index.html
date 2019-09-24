@@ -165,17 +165,19 @@
 <script>
     var swiper = new Swiper('.swiper-banner-home');
 
-    window.onscroll = function() {
+    window.onscroll = function () {
         observerMenu()
     };
 
     function observerMenu() {
-        if(document.body.scrollTop > 35 || document.documentElement.scrollTop > 35){
-            document.getElementsByClassName("menuToggle")[0].style.top='35px';
-            document.getElementsByClassName("section-header-mobile")[0].style.display='block';
-        }else{
-            document.getElementsByClassName("menuToggle")[0].style.top='100px';
-            document.getElementsByClassName("section-header-mobile")[0].style.display='none';
+        if (screen.width <= 600) {
+            if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
+                document.getElementsByClassName("menuToggle")[0].style.top = '35px';
+                document.getElementsByClassName("section-header-mobile")[0].style.display = 'block';
+            } else {
+                document.getElementsByClassName("menuToggle")[0].style.top = '100px';
+                document.getElementsByClassName("section-header-mobile")[0].style.display = 'none';
+            }
         }
 
     }
