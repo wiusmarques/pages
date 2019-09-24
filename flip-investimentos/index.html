@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/common/common.min.css">
@@ -52,7 +53,7 @@
                             "displayMode": "adaptive",
                                 "locale": "br"
             }
-    </script>
+        </script>
 
     <div class="section-header">
         <div class="section-header-conteiner section-header-desktop">
@@ -65,6 +66,11 @@
 
 
     </div>
+
+    <div class="section-header-mobile">
+        
+    </div>
+
 </div>
 
 <nav role="navigation" class="nav-hamburguer">
@@ -105,7 +111,7 @@
             <a href="albuns.html">
                 <li class="menu-item">Sobre</li>
             </a>
-            
+
         </ul>
 
     </div>
@@ -131,6 +137,25 @@
 
                 </div>
             </section>
+            <section class="content-text-first">
+                <div class="content-text-informations">
+                    <div class="content-text-block ml-yellow">
+                        <h2>Acessoria Expecializada</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat vel neque ut
+                            ornare.</p>
+                    </div>
+                    <div class="content-text-block ml-yellow">
+                        <h2>Acessoria Expecializada</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat vel neque ut
+                            ornare.</p>
+                    </div>
+                    <div class="content-text-block">
+                        <h2>Acessoria Expecializada</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat vel neque ut
+                            ornare.</p>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 
@@ -139,6 +164,21 @@
 <script src="assets/js/swiper-4.5.0-min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-banner-home');
+
+    window.onscroll = function() {
+        observerMenu()
+    };
+
+    function observerMenu() {
+        if(document.body.scrollTop > 75 || document.documentElement.scrollTop > 75){
+            document.getElementsByClassName("menuToggle")[0].style.top='35px';
+            document.getElementsByClassName("section-header-mobile")[0].style.display='block';
+        }else{
+            document.getElementsByClassName("menuToggle")[0].style.top='100px';
+            document.getElementsByClassName("section-header-mobile")[0].style.display='none';
+        }
+
+    }
 </script>
 
 </html>
